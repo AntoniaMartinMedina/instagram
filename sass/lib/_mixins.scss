@@ -1,0 +1,48 @@
+// *****************************
+// +++++++ $MIXINS ++++++
+// *****************************
+@mixin position {
+    $colofondo: rgba(0, 0, 0, 0, 0.3);
+    $colortexto: white;
+    $cajaanalisisx: center;
+    $cajaanalisisy: center;
+    // $interioranalisis,
+    
+}
+figure{
+    position: relative;
+
+    img{
+        width: 100%;
+    }
+
+    figcaption{
+        // visibility: hidden;
+        
+        display: flex;
+        justify-content: $cajaanalisisx;
+        align-items: $cajaanalisisy;
+
+    }
+    
+}
+
+.redes{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+
+ &:hover figcaption{
+   visibility: visible;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: $colofondo;
+   color: $colortexto;
+   width: 100%;
+   height: 100%;
+   z-index: 10;
+       
+}
